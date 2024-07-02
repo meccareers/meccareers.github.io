@@ -20,11 +20,10 @@
     <loc>http://localhost:1313/cie/jobsintern/</loc>
     <lastmod>2024-03-31T13:35:49-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/employers/</loc>
-    <lastmod>2024-03-31T13:35:49-04:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/cuny2x/intern/</loc>
     <lastmod>2024-03-31T13:35:49-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/employers/</loc>
   </url><url>
     <loc>http://localhost:1313/cuny2x/career/</loc>
     <lastmod>2024-03-31T13:35:49-04:00</lastmod>
