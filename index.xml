@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MEC Careers Center</title>
-    <link>https://meccareers.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on MEC Careers Center</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://meccareers.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Careers opportunities</title>
-      <link>https://meccareers.github.io/employers/</link>
+      <link>http://localhost:1313/employers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://meccareers.github.io/employers/</guid>
+      <guid>http://localhost:1313/employers/</guid>
       <description>Our students are diverse, experienced, hardworking, and academically talented. Our CUNY2x and CIE programs can serve as your first destination to recruit the most talented and diverse candidates.&#xA;Request a Customized Recruiting Strategy Our Industry and Student Connections sepecialists are eager to connect recruiters with engineering and computer majors students and alumni. We want all employers to be successful in their recruiting endeavors that&amp;rsquo;s why we offer:&#xA;Host an Information Session that allows you to meet and build connections with high-caliber students.</description>
     </item>
   </channel>
