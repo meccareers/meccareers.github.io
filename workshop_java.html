@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Frameworks Workshop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f76b1c 0%, #d32f2f 100%);
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .flyer {
+            background: white;
+            max-width: 850px;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #f76b1c 0%, #d32f2f 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header .host {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+        
+        .instructor {
+            font-size: 1.1em;
+            margin-top: 15px;
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .description {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe6e6 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #f76b1c;
+        }
+        
+        .description h2 {
+            color: #d32f2f;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .description p {
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 1.05em;
+        }
+        
+        .frameworks {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .framework-tag {
+            background: linear-gradient(135deg, #f76b1c 0%, #d32f2f 100%);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+        
+        .welcome-banner {
+            background: linear-gradient(135deg, #f76b1c 0%, #d32f2f 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        .session {
+            background: #f8f9fa;
+            border-left: 5px solid #f76b1c;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .session:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .session-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .day-number {
+            background: linear-gradient(135deg, #f76b1c 0%, #d32f2f 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .session-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2d3748;
+            flex: 1;
+        }
+        
+        .session-details {
+            margin-left: 65px;
+            color: #4a5568;
+        }
+        
+        .date-time {
+            font-weight: 600;
+            color: #d32f2f;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+        
+        .register-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #f76b1c 0%, #d32f2f 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .register-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(247, 107, 28, 0.4);
+        }
+        
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+        }
+        
+        .footer-note {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .footer-contact {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .flyer {
+                box-shadow: none;
+            }
+            .register-btn {
+                background: #f76b1c;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <div class="header">
+            <div class="host">CUNY2X at LaGuardia Community College presents</div>
+            <h1>☕ Java Frameworks Workshop</h1>
+            <div class="subtitle">Master Spring, Hibernate & JavaFX</div>
+            <div class="instructor">👨‍🏫 Instructor: Dr. Omar Ait Hellal</div>
+        </div>
+        
+        <div class="content">
+            <div class="description">
+                <h2>🎯 Workshop Overview</h2>
+                <p>Join us for an immersive workshop that delves into the resurgence of Java frameworks. In today's rapidly evolving landscape of web and standalone application development, mastering these powerful tools is essential for building secure, flexible, and easily deployable applications.</p>
+                <div class="frameworks">
+                    <span class="framework-tag">Spring</span>
+                    <span class="framework-tag">Hibernate</span>
+                    <span class="framework-tag">JavaFX</span>
+                </div>
+            </div>
+            
+            <div class="welcome-banner">
+                ✨ Open to beginners and experienced Java programmers! ✨
+            </div>
+            
+            <div class="session">
+                <div class="session-header">
+                    <div class="day-number">1</div>
+                    <div class="session-title">Session 1: Introduction to Java Frameworks</div>
+                </div>
+                <div class="session-details">
+                    <div class="date-time">📅 Wednesday, October 29, 2025 • 4:00 PM</div>
+                    <div>🌐 Virtual via Zoom</div>
+                    <a href="https://us02web.zoom.us/meeting/register/LPpCMKr-Tbuxcue144bx0Q" class="register-btn" target="_blank">Register Now</a>
+                </div>
+            </div>
+            
+            <div class="session">
+                <div class="session-header">
+                    <div class="day-number">2</div>
+                    <div class="session-title">Session 2: Deep Dive into Spring Framework</div>
+                </div>
+                <div class="session-details">
+                    <div class="date-time">📅 Wednesday, November 5, 2025 • 4:00 PM</div>
+                    <div>🌐 Virtual via Zoom</div>
+                    <a href="https://us02web.zoom.us/meeting/register/LPpCMKr-Tbuxcue144bx0Q" class="register-btn" target="_blank">Register Now</a>
+                </div>
+            </div>
+            
+            <div class="session">
+                <div class="session-header">
+                    <div class="day-number">3</div>
+                    <div class="session-title">Session 3: Database Integration with Hibernate</div>
+                </div>
+                <div class="session-details">
+                    <div class="date-time">📅 Wednesday, November 19, 2025 • 4:00 PM</div>
+                    <div>🌐 Virtual via Zoom</div>
+                    <a href="https://us02web.zoom.us/meeting/register/LPpCMKr-Tbuxcue144bx0Q" class="register-btn" target="_blank">Register Now</a>
+                </div>
+            </div>
+            
+            <div class="session">
+                <div class="session-header">
+                    <div class="day-number">4</div>
+                    <div class="session-title">Session 4: Building Applications with JavaFX</div>
+                </div>
+                <div class="session-details">
+                    <div class="date-time">📅 Wednesday, December 3, 2025 • 4:00 PM</div>
+                    <div>🌐 Virtual via Zoom</div>
+                    <a href="https://us02web.zoom.us/meeting/register/LPpCMKr-Tbuxcue144bx0Q" class="register-btn" target="_blank">Register Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-note">☕ Build secure, flexible applications • Master industry-standard frameworks • Hands-on learning</div>
+            <div class="footer-contact">For questions or more information, please contact Dr. Omar Ait Hellal at oaithellal@lagcc.cuny.edu</oaithellal></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Cybersecurity Workshop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .flyer {
+            background: white;
+            max-width: 850px;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .welcome-banner {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        .session {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .session:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .session-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .day-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .session-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2d3748;
+            flex: 1;
+        }
+        
+        .session-details {
+            margin-left: 65px;
+            color: #4a5568;
+        }
+        
+        .date-time {
+            font-weight: 600;
+            color: #764ba2;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+        
+        .register-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .register-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+        }
+        
+        .footer-note {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .footer-contact {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .flyer {
+                box-shadow: none;
+            }
+            .register-btn {
+                background: #667eea;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <div class="header">
+            <div style="font-size: 1.2em; margin-bottom: 15px; opacity: 0.95;">CUNY2X at LaGuardia Community College presents</div>
+            <h1>🔐 Exploring AI & Cybersecurity 🤖</h1>
+            <div class="subtitle">with Python</div>
+        </div>
+        
+        <div class="content">
+            <div class="welcome-banner">
+                ✨ All students welcome — No prior experience required! ✨
+            </div>
+            
+            <div class="session">
+                <div class="session-header">
+                    <div class="day-number">1</div>
+                    <div class="session-title">Introduction to AI, Cybersecurity & Python Basics</div>
+                </div>
+                <div class="session-details">
+                    <div class="date-time">📅 Friday, October 17 • 2:30-4:00 PM</div>
+                    <div>🌐 Virtual via Zoom</div>
+                    <a href="https://us02web.zoom.us/meeting/register/-wp2q7khRjWqnqKuLmlkig" class="register-btn" target="_blank">Register for Day 1</a>
+                </div>
+            </div>
+            
+            <div class="session">
+                <div class="session-header">
+                    <div class="day-number">2</div>
+                    <div class="session-title">Python for Cybersecurity and AI: Logic, Loops & Lists</div>
+                </div>
+                <div class="session-details">
+                    <div class="date-time">📅 Friday, October 31 • 2:30-4:00 PM</div>
+                    <div>🌐 Virtual via Zoom</div>
+                    <a href="https://us02web.zoom.us/meeting/register/zmxPf8teTCORevkQRY51sw" class="register-btn" target="_blank">Register for Day 2</a>
+                </div>
+            </div>
+            
+            <div class="session">
+                <div class="session-header">
+                    <div class="day-number">3</div>
+                    <div class="session-title">Introduction to Machine Learning & AI in Cybersecurity</div>
+                </div>
+                <div class="session-details">
+                    <div class="date-time">📅 Wednesday, November 12 • 2:30-4:00 PM</div>
+                    <div>🌐 Virtual via Zoom</div>
+                    <a href="https://us02web.zoom.us/meeting/register/u2d1k3sfS-6rXSPMbNKpow" class="register-btn" target="_blank">Register for Day 3</a>
+                </div>
+            </div>
+            
+            <div class="session">
+                <div class="session-header">
+                    <div class="day-number">4</div>
+                    <div class="session-title">Project Day</div>
+                </div>
+                <div class="session-details">
+                    <div class="date-time">📅 Friday, November 21 • 2:30-4:00 PM</div>
+                    <div>🌐 Virtual via Zoom</div>
+                    <a href="https://us02web.zoom.us/meeting/register/f3eaAR-lRceZGFoxhznHKQ" class="register-btn" target="_blank">Register for Day 4</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-note">🎓 Perfect for beginners • Build real skills • Interactive learning</div>
+            <div class="footer-contact">For questions or more information, please contact Dr. Doyel Pal at dpal@lagcc.cuny.edu</dpal></div>
+        </div>
+    </div>
+</body>
+</html>
